@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.daggerHilt)
-    alias(libs.plugins.kspCompose)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -20,8 +20,11 @@ android {
     }
 
     buildTypes {
+        debug {
+            
+        }
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -34,6 +37,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 }
 
@@ -66,4 +73,7 @@ dependencies {
 
     //Fragment
     implementation(libs.androidx.fragment)
+
+    //Timber
+    implementation(libs.timber)
 }
