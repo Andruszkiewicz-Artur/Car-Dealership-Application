@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.daggerHilt)
+    alias(libs.plugins.kspCompose)
 }
 
 android {
@@ -45,4 +47,23 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //Retrofit
+    implementation(libs.bundles.retrofit)
+
+    //OkHttp
+    implementation(libs.bundles.okhttp)
+
+    //Hilt
+    implementation(libs.hilt)
+    ksp(libs.hilt.compiler)
+
+    //Glide
+    implementation(libs.glide)
+
+    //Lifecycle
+    implementation(libs.lifecycle.viewModel)
+
+    //Fragment
+    implementation(libs.androidx.fragment)
 }
