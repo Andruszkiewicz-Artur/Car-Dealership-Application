@@ -3,4 +3,6 @@
     <string name="brand"><b>Brand:</b></string>
     <string name="model"><b>Model:</b></string>
     <string name="price"><b>Price:</b></string>
+    <string name="informacje_o_samochodzie">Informacje o samochodzie</string>
+    <string name="informacje">Informacje:</string>
 </resources>
