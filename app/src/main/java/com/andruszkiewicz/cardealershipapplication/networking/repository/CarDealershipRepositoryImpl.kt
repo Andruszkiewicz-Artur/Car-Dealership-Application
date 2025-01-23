@@ -22,4 +22,14 @@ class CarDealershipRepositoryImpl @Inject constructor(
             emptyList()
         }
 
+    override suspend fun getCar(id: Int): CarModel? =
+        try {
+            carDealershipService
+                .getCar(id)
+                .body()
+                ?.toDomain()
+        } catch (e: Exception) {
+            Timber.e("error: %s", e.message)
+            null
+        }
 }

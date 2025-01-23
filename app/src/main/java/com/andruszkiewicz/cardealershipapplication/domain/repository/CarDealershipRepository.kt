@@ -6,4 +6,6 @@ interface CarDealershipRepository {
 
     suspend fun getCars(): List<CarModel>
 
+    suspend fun getCar(id: Int): CarModel?
+
 }
