@@ -1,26 +1,23 @@
 package com.andruszkiewicz.cardealershipapplication.presentation
 
+import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ItemDecoration
-import com.andruszkiewicz.cardealershipapplication.R
 import com.andruszkiewicz.cardealershipapplication.databinding.ActivityMainBinding
-import com.andruszkiewicz.cardealershipapplication.domain.mode.CarModel
 import com.andruszkiewicz.cardealershipapplication.domain.repository.CarDealershipRepository
 import com.andruszkiewicz.cardealershipapplication.presentation.adapter.adCars.AdCarsRecycleView
+import com.andruszkiewicz.cardealershipapplication.presentation.utils.PresentationUtils
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import timber.log.Timber
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -49,7 +46,9 @@ class MainActivity : AppCompatActivity() {
         with(binding) {
             adCarsAdapter = AdCarsRecycleView(
                 onAdClick = { car ->
-
+                    val intent = Intent(this@MainActivity, CarDetailsActivity::class.java)
+                    intent.putExtra(PresentationUtils.CAR_ID, car.id)
+                    startActivity(intent)
                 }
             )
 
