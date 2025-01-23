@@ -1,91 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/adLl"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_margin="4dp">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="32dp">
-
-        <ImageView
-            android:id="@+id/adIv"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:src="@drawable/ic_image_gray"
-            app:layout_constraintDimensionRatio="1:1"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    android:id="@+id/adMcv"
+    style="@style/Widget.Material3.CardView.Elevated"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/brand"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/brandTv"
-            android:layout_width="wrap_content"
+            <ImageView
+                android:id="@+id/adIv"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_image_gray"
+                android:scaleType="fitCenter"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Brand name"
-            android:layout_marginStart="8dp"/>
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/brand"/>
+
+            <TextView
+                android:id="@+id/brandTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brand name"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/model"/>
+
+            <TextView
+                android:id="@+id/modelTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Model name"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price"/>
+
+            <TextView
+                android:id="@+id/priceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/model"/>
-
-        <TextView
-            android:id="@+id/modelTv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Model name"
-            android:layout_marginStart="8dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/price"/>
-
-        <TextView
-            android:id="@+id/priceTv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Price"
-            android:layout_marginStart="8dp"/>
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/divider_thickness"
-        android:background="@color/gray"
-        android:layout_marginTop="8dp"/>
-
-
-</LinearLayout>
+</com.google.android.material.card.MaterialCardView>
