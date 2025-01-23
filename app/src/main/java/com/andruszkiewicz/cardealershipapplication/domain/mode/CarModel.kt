@@ -11,4 +11,5 @@ data class CarModel (
     val color: String,
     val production_year: Int,
     val description: String,
+    val imagesUrl: List<String>
 )

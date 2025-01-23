@@ -1,6 +1,7 @@
 package com.andruszkiewicz.cardealershipapplication.networking
 
 import com.andruszkiewicz.cardealershipapplication.domain.mode.CarModel
+import com.andruszkiewicz.cardealershipapplication.networking.utils.NetworkUtils
 
 data class CarDto(
     val id: Int,
@@ -25,6 +26,7 @@ data class CarDto(
         transmission = transmission,
         color = color,
         production_year = production_year,
-        description = description
+        description = description,
+        imagesUrl = NetworkUtils.images(id),
     )
 }
