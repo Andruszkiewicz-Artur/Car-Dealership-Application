@@ -1,7 +1,6 @@
 package com.andruszkiewicz.cardealershipapplication.networking.dto
 
-import com.andruszkiewicz.cardealershipapplication.domain.repository.UserModel
-import java.time.LocalDateTime
+import com.andruszkiewicz.cardealershipapplication.domain.mode.UserModel
 
 data class UserDto(
     val id: Int,
@@ -11,7 +10,7 @@ data class UserDto(
     val phone: String,
     val first_name: String,
     val last_name: String,
-    val created_at: String
+    val created_at: String,
 ) {
     fun toDomain() = UserModel(
         id = id,

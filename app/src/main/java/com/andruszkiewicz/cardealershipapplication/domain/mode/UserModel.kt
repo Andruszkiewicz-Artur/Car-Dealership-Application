@@ -1,10 +1,11 @@
-package com.andruszkiewicz.cardealershipapplication.domain.repository
+package com.andruszkiewicz.cardealershipapplication.domain.mode
 
 import com.andruszkiewicz.cardealershipapplication.networking.dto.UserDto
+import com.andruszkiewicz.cardealershipapplication.networking.dto.UserRequest
 import java.time.LocalDateTime
 
 data class UserModel(
-    val id: Int,
+    val id: Int = 0,
     val login: String,
     val password_hash: String,
     val email: String,
@@ -12,7 +13,7 @@ data class UserModel(
     val first_name: String,
     val last_name: String
 ) {
-    fun toDto() = UserDto(
+    fun toDto() = UserRequest(
         id = id,
         login = login,
         password_hash = password_hash,
@@ -20,6 +21,6 @@ data class UserModel(
         phone = phone,
         first_name = first_name,
         last_name = last_name,
-        created_at = LocalDateTime.now().toString()
+        create_at = "2023-11-23T19:30:00"
     )
 }

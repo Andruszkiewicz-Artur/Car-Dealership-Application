@@ -1,16 +1,13 @@
 package com.andruszkiewicz.cardealershipapplication.presentation
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-import com.andruszkiewicz.cardealershipapplication.R
-import com.andruszkiewicz.cardealershipapplication.databinding.ActivityCarDetailsBinding
 import com.andruszkiewicz.cardealershipapplication.databinding.ActivityLoginBinding
 import com.andruszkiewicz.cardealershipapplication.domain.repository.CarDealershipRepository
-import com.andruszkiewicz.cardealershipapplication.domain.repository.UserModel
+import com.andruszkiewicz.cardealershipapplication.domain.mode.UserModel
 import com.andruszkiewicz.cardealershipapplication.presentation.utils.GlobalUser
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
@@ -54,6 +51,10 @@ class LoginActivity : AppCompatActivity() {
             }
             logInBnt.setOnClickListener {
                 validData()
+            }
+            registerBnt.setOnClickListener {
+                val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
+                startActivity(intent)
             }
         }
     }

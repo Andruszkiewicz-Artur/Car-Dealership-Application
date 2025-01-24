@@ -1,7 +1,6 @@
 package com.andruszkiewicz.cardealershipapplication.presentation.utils
 
-import android.util.Log
-import com.andruszkiewicz.cardealershipapplication.domain.repository.UserModel
+import com.andruszkiewicz.cardealershipapplication.domain.mode.UserModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update

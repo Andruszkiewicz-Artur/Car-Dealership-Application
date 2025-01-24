@@ -6,6 +6,14 @@
     <string name="informacje_o_samochodzie">Informacje o samochodzie</string>
     <string name="informacje">Informacje:</string>
     <string name="don_t_have_account_register_now">Don`t have account? <b>Register now!</b></string>
+    <string name="are_you_have_account_log_in">Are you have account? <b>Log in now!</b></string>
     <string name="user_details">User details</string>
     <string name="details">Details:</string>
+    <string name="phone_number">Phone number</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="re_password">Re-Password</string>
+    <string name="register">Register</string>
+    <string name="surname">Surname</string>
+    <string name="name">Name</string>
 </resources>
