@@ -39,7 +39,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initView()
+        initListener()
         takeAds()
+    }
+
+    private fun initListener() {
+        binding.personBnt.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun initView() {
