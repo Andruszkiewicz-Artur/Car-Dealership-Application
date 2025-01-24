@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import com.andruszkiewicz.cardealershipapplication.databinding.ActivityMainBinding
 import com.andruszkiewicz.cardealershipapplication.domain.repository.CarDealershipRepository
 import com.andruszkiewicz.cardealershipapplication.presentation.adapter.adCars.AdCarsRecycleView
+import com.andruszkiewicz.cardealershipapplication.presentation.utils.GlobalUser
 import com.andruszkiewicz.cardealershipapplication.presentation.utils.PresentationUtils
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
@@ -45,7 +46,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun initListener() {
         binding.personBnt.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = if (GlobalUser.user.value == null) Intent(this, LoginActivity::class.java)
+                        else Intent(this, UserDetailsActivity::class.java)
+
             startActivity(intent)
         }
     }

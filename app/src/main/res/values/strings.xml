@@ -6,4 +6,6 @@
     <string name="informacje_o_samochodzie">Informacje o samochodzie</string>
     <string name="informacje">Informacje:</string>
     <string name="don_t_have_account_register_now">Don`t have account? <b>Register now!</b></string>
+    <string name="user_details">User details</string>
+    <string name="details">Details:</string>
 </resources>
