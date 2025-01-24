@@ -3,4 +3,5 @@
     <dimen name="toolbar_height">60dp</dimen>
     <dimen name="image_buton_size">40dp</dimen>
     <dimen name="divider_thickness">1dp</dimen>
+    <dimen name="button_heigh">60dp</dimen>
 </resources>

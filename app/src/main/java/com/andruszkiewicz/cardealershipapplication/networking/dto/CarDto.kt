@@ -1,4 +1,4 @@
-package com.andruszkiewicz.cardealershipapplication.networking
+package com.andruszkiewicz.cardealershipapplication.networking.dto
 
 import com.andruszkiewicz.cardealershipapplication.domain.mode.CarModel
 import com.andruszkiewicz.cardealershipapplication.networking.utils.NetworkUtils

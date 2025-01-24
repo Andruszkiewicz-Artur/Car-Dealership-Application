@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.LoginActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <ImageView
+                android:id="@+id/backBnt"
+                android:layout_width="@dimen/image_buton_size"
+                android:layout_height="@dimen/image_buton_size"
+                android:src="@drawable/ic_back_gray"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_margin="16dp"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp">
+
+
+        <TextView
+            android:id="@+id/loginTv"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:text="Log in"
+            style="@style/TextAppearance.AppCompat.Title"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mailTil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            android:layout_below="@+id/loginTv"
+            android:hint="Email"
+            app:startIconDrawable="@drawable/ic_mail_white"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/mailEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordTil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            android:layout_below="@+id/mailTil"
+            android:hint="Password"
+            app:startIconDrawable="@drawable/ic_lock_white"
+            android:layout_marginTop="20dp"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/passwordEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/registerBnt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/passwordTil"
+            android:textAlignment="textEnd"
+            android:layout_marginTop="10dp"
+            android:text="@string/don_t_have_account_register_now"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/logInBnt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_heigh"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/registerBnt"
+            app:cornerRadius="8dp"
+            android:text="Log in"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
